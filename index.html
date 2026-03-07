@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rituales de Piel · Cremas Faciales Atomy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ─── TOKENS ──────────────────────────────── */
+:root{
+  --cream:   #faf5ee;
+  --sand:    #e8d9c0;
+  --blush:   #d4a99a;
+  --rose:    #b87a6e;
+  --sage:    #8a9e8c;
+  --forest:  #3d5c41;
+  --charcoal:#2a2018;
+  --gold:    #c9a96e;
+  --goldlt:  #e8d4a8;
+  --white:   #fffef9;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--cream);
+  color:var(--charcoal);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+  cursor:default;
+}
+
+/* Grain overlay */
+body::after{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity:.025;
+  pointer-events:none;
+  z-index:9999;
+}
+
+/* ─── HERO ────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-left{
+  background:linear-gradient(160deg, #2a1e14 0%, #3d2b1a 40%, #1e2e1f 100%);
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:80px 60px 60px 70px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* botanical SVG rings */
+.hero-left::before{
+  content:'';
+  position:absolute;
+  width:500px;height:500px;
+  border-radius:50%;
+  border:1px solid rgba(201,169,110,.12);
+  top:-100px;left:-80px;
+}
+.hero-left::after{
+  content:'';
+  position:absolute;
+  width:360px;height:360px;
+  border-radius:50%;
+  border:1px solid rgba(138,158,140,.15);
+  bottom:-60px;right:-40px;
+}
+
+.hero-eyebrow{
+  font-family:'Jost',sans-serif;
+  font-weight:500;
+  font-size:10px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:24px;
+  display:flex;align-items:center;gap:12px;
+  animation:fadeUp .8s ease both;
+}
+.hero-eyebrow::before{
+  content:'';width:30px;height:1px;background:var(--gold);
+}
+
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+  font-size:clamp(52px,5.5vw,80px);
+  line-height:.95;
+  color:var(--cream);
+  margin-bottom:8px;
+  animation:fadeUp .8s .15s ease both;
+}
+.hero-title em{
+  font-style:italic;
+  color:var(--blush);
+  display:block;
+}
+.hero-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:clamp(18px,2vw,26px);
+  color:var(--sand);
+  font-weight:300;
+  margin-bottom:36px;
+  line-height:1.4;
+  animation:fadeUp .8s .25s ease both;
+}
+
+.hero-desc{
+  font-size:14px;
+  line-height:1.8;
+  color:rgba(232,217,192,.75);
+  max-width:380px;
+  margin-bottom:48px;
+  animation:fadeUp .8s .35s ease both;
+}
+
+.hero-ctas{
+  display:flex;flex-wrap:wrap;gap:14px;
+  animation:fadeUp .8s .45s ease both;
+}
+
+/* ─── BUTTONS ───────────────────────────── */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold),#a8813e);
+  color:#1a1006;
+  font-family:'Jost',sans-serif;
+  font-weight:600;font-size:12px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:16px 32px;border-radius:2px;
+  border:none;cursor:pointer;
+  text-decoration:none;
+  transition:transform .25s,box-shadow .25s,opacity .25s;
+  box-shadow:0 8px 30px rgba(201,169,110,.3);
+  position:relative;overflow:hidden;
+}
+.btn-primary::before{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.15),transparent);
+  opacity:0;transition:opacity .25s;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(201,169,110,.45);}
+.btn-primary:hover::before{opacity:1;}
+
+.btn-whatsapp{
+  display:inline-flex;align-items:center;gap:10px;
+  background:transparent;
+  border:1px solid rgba(138,158,140,.5);
+  color:var(--sage);
+  font-family:'Jost',sans-serif;
+  font-weight:500;font-size:12px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:15px 28px;border-radius:2px;
+  cursor:pointer;text-decoration:none;
+  transition:all .25s;
+}
+.btn-whatsapp:hover{
+  background:rgba(138,158,140,.12);
+  border-color:var(--sage);
+  color:#c8e0c8;
+  transform:translateY(-2px);
+}
+.btn-whatsapp svg{flex-shrink:0;}
+
+.btn-download{
+  display:inline-flex;align-items:center;gap:10px;
+  background:transparent;
+  border:1px solid rgba(201,169,110,.35);
+  color:var(--goldlt);
+  font-family:'Jost',sans-serif;
+  font-weight:400;font-size:12px;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:15px 28px;border-radius:2px;
+  cursor:pointer;text-decoration:none;
+  transition:all .25s;
+}
+.btn-download:hover{
+  background:rgba(201,169,110,.1);
+  border-color:var(--gold);
+  transform:translateY(-2px);
+}
+
+/* ─── HERO RIGHT (product image) ──────── */
+.hero-right{
+  background:linear-gradient(170deg,var(--sand) 0%,var(--cream) 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:60px 40px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-right::before{
+  content:'';
+  position:absolute;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,169,154,.25),transparent 70%);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+
+/* Floral ring decoration */
+.floral-ring{
+  position:absolute;
+  width:420px;height:420px;
+  border-radius:50%;
+  border:1px solid rgba(184,122,110,.18);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  animation:spinSlow 40s linear infinite;
+}
+.floral-ring::after{
+  content:'✿';
+  position:absolute;
+  top:-12px;left:50%;transform:translateX(-50%);
+  font-size:22px;color:var(--blush);opacity:.5;
+}
+@keyframes spinSlow{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+.product-image-zone{
+  position:relative;z-index:2;
+  width:100%;max-width:380px;
+  aspect-ratio:1/1.05;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(42,32,24,.2),0 10px 30px rgba(42,32,24,.1);
+  background:linear-gradient(135deg,var(--sand),#f5e8d8);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:12px;
+  cursor:pointer;
+  transition:box-shadow .3s,transform .3s;
+}
+.product-image-zone:hover{
+  box-shadow:0 40px 100px rgba(42,32,24,.28);
+  transform:translateY(-4px);
+}
+.product-image-zone img{
+  width:100%;height:100%;object-fit:cover;display:none;
+}
+.product-image-zone img.loaded{display:block;}
+.upload-placeholder{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  padding:20px;text-align:center;
+}
+.upload-placeholder.hidden{display:none;}
+.upload-icon{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(184,122,110,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+}
+.upload-placeholder p{font-size:13px;color:var(--rose);font-weight:400;line-height:1.5;}
+.upload-placeholder span{font-size:11px;color:var(--blush);letter-spacing:1px;}
+#imageInput{display:none;}
+.upload-btn{
+  background:var(--rose);color:white;
+  border:none;border-radius:2px;
+  padding:10px 22px;font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;transition:.2s;font-family:'Jost',sans-serif;
+}
+.upload-btn:hover{background:#a06458;}
+
+.hero-product-caption{
+  position:relative;z-index:2;
+  margin-top:20px;text-align:center;
+}
+.hero-product-caption h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:400;
+  color:var(--charcoal);margin-bottom:4px;
+}
+.hero-product-caption p{
+  font-size:11px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--rose);
+}
+
+/* Hero product badge */
+.product-badge{
+  position:absolute;top:20px;right:20px;z-index:3;
+  background:var(--forest);
+  color:var(--goldlt);
+  font-size:10px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:8px 14px;border-radius:1px;
+}
+
+/* ─── STRIP ───────────────────────────── */
+.strip{
+  background:var(--forest);
+  padding:18px 40px;
+  display:flex;align-items:center;justify-content:center;
+  gap:60px;flex-wrap:wrap;overflow:hidden;
+  position:relative;
+}
+.strip::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent,transparent 120px,rgba(255,255,255,.02) 120px,rgba(255,255,255,.02) 121px);
+}
+.strip-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(232,217,192,.7);white-space:nowrap;
+}
+.strip-item span{color:var(--gold);font-size:16px;}
+
+/* ─── SECCIÓN: LIBRO ─────────────────── */
+.book-section{
+  padding:100px 60px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+  max-width:1200px;margin:0 auto;
+}
+
+.book-cover-wrap{
+  position:relative;
+  display:flex;justify-content:center;
+  animation:floatBook 5s ease-in-out infinite;
+}
+@keyframes floatBook{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ── BOOK COVER (portada mejorada) ── */
+.book-cover{
+  width:260px;
+  background:linear-gradient(145deg,#2a1e14,#1e2e1f);
+  border-radius:3px 10px 10px 3px;
+  box-shadow:
+    -6px 0 0 #1a1208,
+    -12px 6px 20px rgba(0,0,0,.4),
+    6px 6px 40px rgba(0,0,0,.25),
+    inset 2px 0 6px rgba(0,0,0,.3);
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:transform .35s,box-shadow .35s;
+}
+.book-cover:hover{
+  transform:perspective(600px) rotateY(-8deg) translateX(-8px);
+  box-shadow:
+    -6px 0 0 #1a1208,
+    -18px 10px 40px rgba(0,0,0,.5),
+    12px 6px 50px rgba(0,0,0,.2);
+}
+.book-cover-inner{
+  padding:36px 28px 30px;
+  min-height:380px;
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  overflow:hidden;
+}
+/* ornamental circle */
+.book-cover-inner::before{
+  content:'';
+  position:absolute;
+  width:200px;height:200px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,169,110,.12),transparent 70%);
+  top:-50px;right:-50px;
+}
+.book-cover-inner::after{
+  content:'❧';
+  position:absolute;
+  bottom:28px;left:50%;transform:translateX(-50%);
+  font-size:28px;color:rgba(201,169,110,.4);
+  letter-spacing:0;
+}
+.book-series{
+  font-size:8px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);font-family:'Jost',sans-serif;font-weight:500;
+  margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.book-series::before,.book-series::after{content:'';flex:1;height:1px;background:rgba(201,169,110,.3);}
+.book-title-main{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-weight:300;
+  letter-spacing:3px;text-transform:uppercase;
+  color:rgba(232,217,192,.6);
+  margin-bottom:6px;
+}
+.book-title-big{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:clamp(34px,4vw,46px);
+  line-height:1;
+  color:var(--cream);
+  margin-bottom:4px;
+}
+.book-title-accent{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:600;
+  font-size:clamp(26px,3vw,36px);
+  color:var(--gold);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.book-subtitle{
+  font-family:'Jost',sans-serif;
+  font-size:11px;
+  color:rgba(232,217,192,.55);
+  letter-spacing:1px;
+  line-height:1.5;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(201,169,110,.2);
+}
+.book-author{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:13px;
+  color:rgba(201,169,110,.7);
+  margin-top:8px;
+}
+/* Book spine shadow */
+.book-spine{
+  position:absolute;left:0;top:0;bottom:0;
+  width:16px;
+  background:linear-gradient(90deg,#0e0a06,#2a1e14);
+  border-right:1px solid rgba(201,169,110,.1);
+}
+
+/* Book glow */
+.book-glow{
+  position:absolute;
+  bottom:-40px;left:50%;transform:translateX(-50%);
+  width:200px;height:60px;
+  background:radial-gradient(ellipse,rgba(201,169,110,.3),transparent 70%);
+  pointer-events:none;
+}
+
+/* Book text */
+.book-text h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4vw,52px);
+  font-weight:300;
+  line-height:1.1;
+  color:var(--charcoal);
+  margin-bottom:16px;
+}
+.book-text h2 em{font-style:italic;color:var(--rose);}
+.book-text p{
+  font-size:15px;line-height:1.85;
+  color:#6b5a48;margin-bottom:24px;
+}
+.book-benefits{
+  list-style:none;margin-bottom:36px;
+}
+.book-benefits li{
+  font-size:14px;
+  padding:8px 0;
+  border-bottom:1px solid rgba(184,122,110,.15);
+  display:flex;align-items:center;gap:12px;
+  color:#6b5a48;
+}
+.book-benefits li::before{
+  content:'✦';color:var(--gold);font-size:10px;flex-shrink:0;
+}
+
+/* ─── SECCIÓN: VIDEO ─────────────────── */
+.video-section{
+  background:linear-gradient(170deg,#1e2e1f 0%,#2a1e14 100%);
+  padding:100px 60px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.video-section::before{
+  content:'';
+  position:absolute;
+  width:800px;height:800px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,169,110,.06),transparent 60%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.video-eyebrow{
+  font-size:10px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;font-weight:500;
+}
+.video-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4.5vw,60px);
+  font-weight:300;color:var(--cream);
+  margin-bottom:10px;line-height:1.1;
+}
+.video-title em{font-style:italic;color:var(--blush);}
+.video-desc{
+  font-size:14px;color:rgba(232,217,192,.6);
+  max-width:480px;margin:0 auto 48px;
+  line-height:1.8;
+}
+.video-wrap{
+  position:relative;
+  max-width:760px;
+  margin:0 auto;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(201,169,110,.2);
+}
+.video-placeholder{
+  background:linear-gradient(145deg,#1a1208,#2a2018);
+  aspect-ratio:16/9;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:16px;cursor:pointer;
+  transition:.3s;
+  border:1px solid rgba(201,169,110,.15);
+  border-radius:6px;
+}
+.video-placeholder:hover{background:linear-gradient(145deg,#1e1610,#302818);}
+.video-placeholder iframe{
+  width:100%;height:100%;
+  position:absolute;inset:0;
+  border:none;
+}
+/* Si el user no puso URL, mostrar input */
+.video-input-wrap{
+  display:flex;gap:10px;align-items:center;
+  flex-wrap:wrap;justify-content:center;
+  margin-top:16px;
+}
+.video-url-input{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(201,169,110,.25);
+  border-radius:2px;padding:10px 16px;
+  color:var(--sand);font-family:'Jost',sans-serif;font-size:13px;
+  width:340px;outline:none;
+  transition:.2s;
+}
+.video-url-input:focus{border-color:var(--gold);background:rgba(255,255,255,.09);}
+.video-url-input::placeholder{color:rgba(201,169,110,.4);}
+.btn-set-video{
+  background:var(--gold);color:#1a1006;
+  border:none;border-radius:2px;padding:10px 22px;
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;cursor:pointer;
+  font-family:'Jost',sans-serif;transition:.2s;
+}
+.btn-set-video:hover{background:var(--goldlt);}
+
+/* ─── SECCIÓN: BENEFICIOS PRODUCTO ──── */
+.benefits-section{
+  padding:100px 60px;
+  max-width:1200px;margin:0 auto;
+}
+.benefits-header{
+  text-align:center;margin-bottom:70px;
+}
+.benefits-header h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,4.5vw,62px);
+  font-weight:300;color:var(--charcoal);
+  line-height:1.1;margin-bottom:12px;
+}
+.benefits-header h2 em{font-style:italic;color:var(--rose);}
+.benefits-header p{
+  font-size:15px;color:#8a7a6a;
+  max-width:480px;margin:0 auto;line-height:1.8;
+}
+
+.benefits-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;
+}
+.benefit-card{
+  background:var(--white);
+  padding:40px 32px;
+  border:1px solid rgba(184,122,110,.1);
+  transition:background .3s,transform .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+}
+.benefit-card::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--blush),transparent);
+  transform:scaleX(0);transition:transform .4s;
+}
+.benefit-card:hover{
+  background:#fdf8f3;
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(184,122,110,.12);
+  z-index:1;
+}
+.benefit-card:hover::after{transform:scaleX(1);}
+.benefit-icon{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(212,169,154,.2),rgba(184,122,110,.1));
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:22px;
+  border:1px solid rgba(184,122,110,.2);
+}
+.benefit-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:600;
+  color:var(--charcoal);margin-bottom:12px;
+}
+.benefit-card p{
+  font-size:14px;line-height:1.8;color:#8a7a6a;
+}
+
+/* ─── SECCIÓN: PRODUCTO DETALLE ──────── */
+.product-detail{
+  padding:100px 60px;
+  background:linear-gradient(170deg,#f5ede2,var(--cream));
+}
+.product-detail-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.product-steps{counter-reset:step;}
+.product-step{
+  display:flex;gap:20px;
+  padding:24px 0;
+  border-bottom:1px solid rgba(184,122,110,.12);
+  counter-increment:step;
+}
+.product-step:last-child{border-bottom:none;}
+.step-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;font-weight:300;font-style:italic;
+  color:rgba(184,122,110,.25);
+  line-height:1;flex-shrink:0;width:50px;
+}
+.step-content h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:600;
+  color:var(--charcoal);margin-bottom:6px;
+}
+.step-content p{font-size:13px;line-height:1.8;color:#8a7a6a;}
+
+.product-cta-box{
+  background:linear-gradient(145deg,#2a1e14,#1e2e1f);
+  border-radius:4px;
+  padding:48px 40px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(42,32,24,.2);
+  position:relative;overflow:hidden;
+}
+.product-cta-box::before{
+  content:'';
+  position:absolute;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(201,169,110,.08),transparent 70%);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.cta-box-eyebrow{
+  font-size:10px;letter-spacing:4px;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:16px;
+}
+.cta-box-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;font-weight:300;
+  color:var(--cream);margin-bottom:4px;
+}
+.cta-box-price span{font-size:20px;vertical-align:top;margin-top:8px;display:inline-block;}
+.cta-box-pv{
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--sage);margin-bottom:28px;
+}
+.cta-box-desc{
+  font-size:13px;color:rgba(232,217,192,.6);
+  line-height:1.7;margin-bottom:32px;
+}
+.cta-btns{display:flex;flex-direction:column;gap:12px;align-items:center;}
+.btn-buy{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold),#a8813e);
+  color:#1a1006;width:100%;
+  font-family:'Jost',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:3px;text-transform:uppercase;
+  padding:18px;border-radius:2px;
+  border:none;cursor:pointer;text-decoration:none;
+  transition:.25s;box-shadow:0 8px 30px rgba(201,169,110,.3);
+}
+.btn-buy:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 14px 40px rgba(201,169,110,.45);}
+.btn-wa-big{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:transparent;
+  border:1px solid rgba(76,175,80,.4);
+  color:#88d48a;width:100%;
+  font-family:'Jost',sans-serif;font-weight:500;font-size:12px;
+  letter-spacing:3px;text-transform:uppercase;
+  padding:16px;border-radius:2px;
+  cursor:pointer;text-decoration:none;
+  transition:.25s;
+}
+.btn-wa-big:hover{background:rgba(76,175,80,.08);border-color:#88d48a;transform:translateY(-2px);}
+
+/* ─── TESTIMONIALS ───────────────────── */
+.testimonials{
+  padding:80px 60px;
+  background:var(--white);
+  overflow:hidden;
+}
+.testimonials h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4vw,54px);font-weight:300;
+  text-align:center;margin-bottom:60px;
+  color:var(--charcoal);
+}
+.testimonials h2 em{color:var(--rose);font-style:italic;}
+.testi-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;max-width:1100px;margin:0 auto;
+}
+.testi-card{
+  padding:32px 28px;
+  border:1px solid rgba(184,122,110,.12);
+  border-radius:3px;
+  background:var(--cream);
+  transition:.3s;position:relative;
+}
+.testi-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(184,122,110,.1);}
+.testi-card::before{
+  content:'\201C';
+  font-family:'Cormorant Garamond',serif;
+  font-size:80px;font-weight:300;
+  color:rgba(184,122,110,.2);
+  position:absolute;top:10px;left:20px;
+  line-height:1;
+}
+.testi-text{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:17px;
+  line-height:1.7;color:var(--charcoal);
+  margin-bottom:20px;padding-top:30px;
+}
+.testi-author{
+  font-size:11px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--rose);
+  display:flex;align-items:center;gap:8px;
+}
+.testi-author::before{content:'✦';font-size:8px;color:var(--gold);}
+.stars{color:var(--gold);font-size:12px;margin-bottom:12px;}
+
+/* ─── FOOTER ─────────────────────────── */
+footer{
+  background:#1a1208;
+  padding:60px 60px 40px;
+  text-align:center;
+}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;font-size:36px;
+  color:var(--gold);margin-bottom:6px;
+}
+.footer-sub{
+  font-size:10px;letter-spacing:4px;text-transform:uppercase;
+  color:rgba(201,169,110,.5);margin-bottom:30px;
+}
+.footer-links{
+  display:flex;justify-content:center;gap:32px;flex-wrap:wrap;
+  margin-bottom:40px;
+}
+.footer-links a{
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:rgba(232,217,192,.5);text-decoration:none;
+  transition:.2s;
+}
+.footer-links a:hover{color:var(--gold);}
+.footer-divider{
+  width:60px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,169,110,.4),transparent);
+  margin:30px auto;
+}
+.footer-copy{
+  font-size:11px;color:rgba(201,169,110,.35);
+  letter-spacing:1px;
+}
+
+/* ─── ANIMACIONES ────────────────────── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ─── RESPONSIVE ─────────────────────── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:60px 32px 50px;min-height:70vh;}
+  .hero-right{padding:50px 32px;}
+  .book-section{grid-template-columns:1fr;gap:50px;padding:70px 32px;}
+  .book-cover-wrap{order:-1;}
+  .benefits-grid{grid-template-columns:1fr;}
+  .product-detail-inner{grid-template-columns:1fr;gap:50px;}
+  .product-detail{padding:70px 32px;}
+  .testi-grid{grid-template-columns:1fr;}
+  .testimonials,.benefits-section{padding:70px 32px;}
+  .video-section{padding:70px 32px;}
+  .strip{gap:24px;}
+  footer{padding:50px 32px 30px;}
+}
+@media(max-width:600px){
+  .hero-ctas{flex-direction:column;}
+  .hero-ctas a,.hero-ctas button{width:100%;justify-content:center;}
+  .cta-btns a{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero">
+
+  <!-- LEFT: copy -->
+  <div class="hero-left">
+    <p class="hero-eyebrow">Belleza · Ciencia · Naturaleza</p>
+    <h1 class="hero-title">
+      Ritual<br>
+      <em>de Piel</em>
+    </h1>
+    <p class="hero-subtitle">Resultados visibles desde la primera aplicación</p>
+    <p class="hero-desc">
+      Las cremas faciales Atomy combinan biotecnología coreana con los mejores ingredientes
+      naturales. Hidratación profunda, luminosidad y juventud para tu piel — sin compromisos.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://mx.atomy.com/product/X19087" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Ver Producto Oficial
+      </a>
+      <a href="https://wa.me/52TUNUMEROAQUI?text=Hola!%20Vi%20tu%20p%C3%A1gina%20y%20me%20interesan%20las%20cremas%20Atomy%20%F0%9F%8C%BF%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n?"
+         target="_blank" class="btn-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+        Más Información
+      </a>
+    </div>
+  </div>
+
+  <!-- RIGHT: imagen producto -->
+  <div class="hero-right">
+    <div class="floral-ring"></div>
+    <div class="product-badge">Atomy · X19087</div>
+
+    <div class="product-image-zone" id="imageZone" onclick="document.getElementById('imageInput').click()">
+      <img id="productImg" src="" alt="Cremas Faciales Atomy">
+      <div class="upload-placeholder" id="uploadPlaceholder">
+        <div class="upload-icon">🌿</div>
+        <p><strong>Sube la foto de tus cremas</strong><br>aquí aparecerá tu producto</p>
+        <span>JPG · PNG · WEBP</span>
+        <button class="upload-btn" onclick="event.stopPropagation();document.getElementById('imageInput').click()">
+          + Subir imagen
+        </button>
+      </div>
+    </div>
+    <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)">
+
+    <div class="hero-product-caption">
+      <h3>4 Pasos PV's Up</h3>
+      <p>Ritual Completo de Cuidado Facial</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════
+     STRIP
+════════════════════════════════════════ -->
+<div class="strip">
+  <div class="strip-item"><span>✦</span> Biotecnología Coreana</div>
+  <div class="strip-item"><span>✦</span> Sin Parabenos</div>
+  <div class="strip-item"><span>✦</span> Dermatológicamente Probado</div>
+  <div class="strip-item"><span>✦</span> Envío a Todo México</div>
+  <div class="strip-item"><span>✦</span> Garantía de Satisfacción</div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     BENEFICIOS
+════════════════════════════════════════ -->
+<section class="benefits-section">
+  <div class="benefits-header reveal">
+    <h2>¿Por qué elegir<br><em>Atomy para tu piel?</em></h2>
+    <p>Una línea de skincare que equilibra ciencia avanzada con el poder de los ingredientes naturales más puros.</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal">
+      <div class="benefit-icon">🌿</div>
+      <h3>Ingredientes Naturales</h3>
+      <p>Fórmulas enriquecidas con extractos botánicos seleccionados de Corea, China y Japón. Sin químicos agresivos que dañen tu piel.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.1s">
+      <div class="benefit-icon">🔬</div>
+      <h3>Tecnología Premium</h3>
+      <p>Desarrollado con la más alta biotecnología coreana, certificada y probada dermatológicamente para resultados visibles y duraderos.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.2s">
+      <div class="benefit-icon">✨</div>
+      <h3>Resultados Reales</h3>
+      <p>Más de 1,189 compras en México. Mujeres que ven luminosidad, hidratación profunda y reducción de líneas de expresión desde la primera semana.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.3s">
+      <div class="benefit-icon">💧</div>
+      <h3>Hidratación 24 hrs</h3>
+      <p>La barrera de hidratación actúa todo el día. Tu piel se siente suave, tersa y jugosa desde la mañana hasta la noche.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.4s">
+      <div class="benefit-icon">🌸</div>
+      <h3>Para Todo Tipo de Piel</h3>
+      <p>Formulado para pieles sensibles, mixtas, grasas y secas. Tolerable, ligero y eficaz — sin importar tu tipo de piel.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.5s">
+      <div class="benefit-icon">🏆</div>
+      <h3>Marca Global</h3>
+      <p>Atomy está presente en más de 40 países. Millones de clientes en el mundo confirman la calidad de sus productos de belleza.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     VIDEO
+════════════════════════════════════════ -->
+<section class="video-section">
+  <p class="video-eyebrow reveal">Míralo en acción</p>
+  <h2 class="video-title reveal">Descubre el <em>ritual</em><br>paso a paso</h2>
+  <p class="video-desc reveal">Ve cómo estas cremas transforman la piel. Resultados reales, aplicación sencilla, ciencia detrás de cada gota.</p>
+
+  <div class="video-wrap reveal" id="videoWrap">
+    <div class="video-placeholder" id="videoPlaceholder">
+      <div style="font-size:48px;margin-bottom:8px;opacity:.4;">▶</div>
+      <p style="color:rgba(232,217,192,.5);font-size:13px;letter-spacing:2px;text-transform:uppercase;">Pega tu URL de YouTube</p>
+    </div>
+  </div>
+
+  <!-- Input para pegar URL de YouTube -->
+  <div class="video-input-wrap">
+    <input type="text" class="video-url-input" id="videoUrl"
+      placeholder="https://www.youtube.com/watch?v=TU_VIDEO_ID"
+      value="">
+    <button class="btn-set-video" onclick="embedVideo()">▶ Cargar Video</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PRODUCTO DETALLE + CTA
+════════════════════════════════════════ -->
+<section class="product-detail">
+  <div class="product-detail-inner">
+    <div class="product-steps reveal">
+      <div style="margin-bottom:32px;">
+        <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-weight:500;">El Ritual Completo</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--charcoal);line-height:1.1;margin-bottom:16px;">
+          4 pasos para una<br><em style="font-style:italic;color:var(--rose);">piel perfecta</em>
+        </h2>
+        <p style="font-size:14px;color:#8a7a6a;line-height:1.8;">El set X19087 incluye todo lo que necesitas en un solo ritual de belleza mañana y noche.</p>
+      </div>
+
+      <div class="product-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Limpieza Profunda</h4>
+          <p>Elimina impurezas, maquillaje y células muertas sin resecar. Prepara el canvas perfecto para los siguientes pasos.</p>
+        </div>
+      </div>
+      <div class="product-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Tónico Equilibrador</h4>
+          <p>Reequilibra el pH de tu piel y abre los poros para que los activos penetren en profundidad.</p>
+        </div>
+      </div>
+      <div class="product-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Sérum Concentrado</h4>
+          <p>Los ingredientes activos más potentes en su concentración más pura. Trata líneas de expresión e hiperpigmentación.</p>
+        </div>
+      </div>
+      <div class="product-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Crema Hidratante</h4>
+          <p>Sella todo el ritual con una barrera protectora que hidrata 24 horas y protege de los agentes externos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA BOX -->
+    <div class="product-cta-box reveal">
+      <p class="cta-box-eyebrow">Atomy México · X19087</p>
+      <div class="cta-box-price"><span>$</span>830<span style="font-size:18px;">.00</span></div>
+      <p style="font-size:11px;color:rgba(232,217,192,.45);margin-bottom:4px;">MXN · IVA Incluido</p>
+      <p class="cta-box-pv">16,000 PV · Envío gratis +$2,000 MXN</p>
+      <p class="cta-box-desc">Set completo de 4 productos para tu ritual diario de cuidado facial. Biotecnología coreana de la más alta calidad.</p>
+      <div class="cta-btns">
+        <a href="https://mx.atomy.com/product/X19087" target="_blank" class="btn-buy">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Comprar en Atomy
+        </a>
+        <a href="https://wa.me/52TUNUMEROAQUI?text=Hola!%20Vi%20tu%20p%C3%A1gina%20y%20quiero%20pedir%20las%20Cremas%20Atomy%20X19087%20%F0%9F%8C%BF%20%C2%BFPuedes%20ayudarme?"
+           target="_blank" class="btn-wa-big">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+          Pedir por WhatsApp
+        </a>
+        <a href="#libro" class="btn-download" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(201,169,110,.3);color:rgba(232,217,192,.65);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;border-radius:2px;text-decoration:none;font-family:'Jost',sans-serif;transition:.25s;width:100%;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar Guía Gratis
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     LIBRO (PORTADA MEJORADA)
+════════════════════════════════════════ -->
+<section class="book-section" id="libro">
+  <div class="book-cover-wrap">
+    <div class="book-cover">
+      <div class="book-spine"></div>
+      <div class="book-cover-inner">
+        <div>
+          <p class="book-series">Serie Belleza Natural</p>
+          <p class="book-title-main">Los</p>
+          <h2 class="book-title-big">Secretos</h2>
+          <p class="book-title-accent">del Aceite<br>de Coco</p>
+          <p class="book-subtitle">Una guía práctica para transformar<br>tu rutina de belleza con aceite de coco</p>
+          <p class="book-author">— Edición Digital Gratuita</p>
+        </div>
+      </div>
+    </div>
+    <div class="book-glow"></div>
+  </div>
+
+  <div class="book-text">
+    <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--rose);margin-bottom:14px;font-weight:500;">Recurso Gratuito</p>
+    <h2>Descarga tu guía<br><em>de belleza natural</em></h2>
+    <p>En este libro digital descubrirás más de 25 usos del aceite de coco para tu piel, cabello y cuerpo. Recetas caseras, técnicas y secretos de belleza que las coreanas llevan décadas usando.</p>
+    <ul class="book-benefits">
+      <li>25+ usos del aceite de coco para piel y cabello</li>
+      <li>Recetas caseras de máscaras y tratamientos</li>
+      <li>Combinaciones con ingredientes naturales</li>
+      <li>Rutina de noche para piel radiante</li>
+      <li>Tips de mujeres coreanas sobre skincare natural</li>
+    </ul>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <a href="#" class="btn-primary" onclick="alert('Reemplaza este enlace con tu URL de descarga del PDF')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar PDF Gratis
+      </a>
+      <a href="https://wa.me/52TUNUMEROAQUI?text=Hola!%20Me%20interesa%20el%20libro%20de%20aceite%20de%20coco%20%F0%9F%A5%A5%20%C2%BFMe%20lo%20puedes%20enviar?"
+         target="_blank" class="btn-whatsapp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Recibir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TESTIMONIOS
+════════════════════════════════════════ -->
+<section class="testimonials">
+  <h2>Lo que dicen<br><em>nuestras clientas</em></h2>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Llevo 3 semanas usándolo y mi piel ya se ve diferente. Más luminosa, sin opacidad. Mi esposo me preguntó qué me había hecho."</p>
+      <div class="testi-author">Mariana G. · CDMX</div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.15s">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"Tengo piel muy sensible y todas las cremas me irritaban. Con Atomy fue la primera vez que mi piel no reaccionó mal. La textura es increíble."</p>
+      <div class="testi-author">Sofía R. · Guadalajara</div>
+    </div>
+    <div class="testi-card reveal" style="transition-delay:.3s">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"El precio me sorprendió — pensé que era caro hasta que vi los resultados. Ahora no uso nada más. El ritual de 4 pasos es mi favorito del día."</p>
+      <div class="testi-author">Valentina M. · Monterrey</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">Rituales de Piel</div>
+  <div class="footer-sub">Distribuidora Independiente Atomy México</div>
+  <div class="footer-links">
+    <a href="https://mx.atomy.com/product/X19087" target="_blank">Ver Producto</a>
+    <a href="https://wa.me/52TUNUMEROAQUI" target="_blank">WhatsApp</a>
+    <a href="#libro">Guía Gratuita</a>
+    <a href="#video">Video</a>
+  </div>
+  <div class="footer-divider"></div>
+  <p class="footer-copy">© 2025 · Distribuidora Independiente Atomy · atomy.com/mx · Sitio no oficial — material creado por distribuidora independiente</p>
+</footer>
+
+<script>
+// ── Cargar imagen de producto ──────────
+function loadImage(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = document.getElementById('productImg');
+    img.src = e.target.result;
+    img.classList.add('loaded');
+    document.getElementById('uploadPlaceholder').classList.add('hidden');
+    document.getElementById('imageZone').style.cursor = 'default';
+    document.getElementById('imageZone').onclick = null;
+  };
+  reader.readAsDataURL(file);
+}
+
+// ── Embeber video de YouTube ───────────
+function embedVideo(){
+  let url = document.getElementById('videoUrl').value.trim();
+  if(!url){ alert('Por favor pega la URL de tu video de YouTube'); return; }
+
+  let videoId = '';
+  // formatos: watch?v=, youtu.be/, embed/
+  const m1 = url.match(/[?&]v=([^&#]+)/);
+  const m2 = url.match(/youtu\.be\/([^?&#]+)/);
+  const m3 = url.match(/embed\/([^?&#]+)/);
+  if(m1) videoId = m1[1];
+  else if(m2) videoId = m2[1];
+  else if(m3) videoId = m3[1];
+
+  if(!videoId){ alert('No pude extraer el ID del video. Asegúrate de pegar una URL válida de YouTube.'); return; }
+
+  const wrap = document.getElementById('videoWrap');
+  wrap.innerHTML = `<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+    <iframe src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=0"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen title="Video Atomy Cremas Faciales"></iframe>
+  </div>`;
+}
+
+// ── Scroll reveal ─────────────────────
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
